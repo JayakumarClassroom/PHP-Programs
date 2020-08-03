@@ -7,9 +7,9 @@ When using an array, we may often want to check whether a certain value is prese
 $lamborghinis = array("Urus", "Huracan", "Aventador");
 
 // new concept car by lamborghini
-$concept = "estoque";
+$concept = "Urus";
 
-echo in_array($concept, $lamborghinis) ? 'Added to the Lineup' : 'Not yet!'
+echo in_array($concept, $lamborghinis) ? 
+'True' : 'Not yet!'
 
 ?>
-

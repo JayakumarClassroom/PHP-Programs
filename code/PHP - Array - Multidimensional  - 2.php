@@ -13,7 +13,9 @@ $contacts = array(
         "name" => "Harry Potter",
         "email" => "harrypotter@mail.com",
         )
+        
     );
     // Access nested value
-    echo "Peter Parker's Email-id is: " . $contacts[0]["email"];
+    echo "Peter Parker's Email-id is: " 
+    . $contacts[0]["email"];
     ?>

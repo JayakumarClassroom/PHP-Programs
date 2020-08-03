@@ -29,7 +29,7 @@ foreach($cars2 as $x=>$x_value)
 
 $cars3 = array("Lamborghini"=>"Urus","Porsche"=>"Cayenne","Bentley"=>"Bentayga","Rolls-Royce"=>"Phantom");
 
-echo "<hr>asort - sort associative arrays in ascending order, according to the value<br>";
+echo "<hr>asort - sort associative arrays in descending order, according to the value<br>";
 arsort($cars3);
 foreach($cars3 as $x=>$x_value)
 {
