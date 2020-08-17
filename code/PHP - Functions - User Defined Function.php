@@ -4,5 +4,8 @@ function addnum() {   //creating the function
     $b=20;
     echo $c=$a+$b;
 }
-echo "Total Number is : ",addnum();  //calling the function
+echo "Total Number is : ",addnum(); 
+//calling the function
+//echo "<br>Second Total Number is : ",addnum(); 
+
 ?>

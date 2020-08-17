@@ -1,10 +1,11 @@
 <?php 
-function setHeight($minheight = 50)
-{
-    echo "The height is : $minheight  <br/><br/>";
-}
-setHeight(350);
-setHeight(); // will use the default value of 50
-setHeight(135);
-setHeight(80);
-?>
+function setHeight(
+    $minheight = 50,$weight=100)
+    {
+        echo "The height is : $minheight, $weight  <br/><br/>";
+    }
+    setHeight(350,102);
+    setHeight("",); // will use the default value of 50
+    setHeight(135,323);
+    setHeight(12,121);
+    ?>
