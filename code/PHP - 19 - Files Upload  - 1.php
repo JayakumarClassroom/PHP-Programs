@@ -13,9 +13,8 @@
 
 ========================================================
 
-<?php
 
-if(isset($_POST["submit"])){
+<?php if (isset($_POST["submit"])) {
     $file = $_FILES['file'];
     //print_r($file);
 
@@ -25,36 +24,33 @@ if(isset($_POST["submit"])){
     $fileError = $_FILES['file']['error'];
     $fileTmpName = $_FILES['file']['tmp_name'];
 
-    $fileExt = explode('.' , $fileName);
-   // echo "<br><br>";
+    $fileExt = explode('.', $fileName);
+    // echo "<br><br>";
     //print_r($fileExt);
 
     $fileActualExt = strtolower(end($fileExt));
     //echo "<br><br>";
     //print_r($fileActualExt);
 
-    $fileTypeAllowed = array('jpg','png','jpeg','gif','pdf');
+    $fileTypeAllowed = array('jpg', 'png', 'jpeg', 'gif');
 
-
-    if (in_array($fileActualExt,$fileTypeAllowed)){
-        if($fileError === 0){
-            if($fileSize < 1000000){
-                //$fileNameNew =uniqid('', true).".".$fileActualExt;
-                $fileNameNew =$fileName;
-                $fileDestination = 'uploads/'.$fileNameNew;
-                move_uploaded_file($fileTmpName,$fileDestination);
-                echo "File Uploaded Successfully ". $fileNameNew;
-            }
-            else {
+    if (in_array($fileActualExt, $fileTypeAllowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 1000000) {
+                //Creates Random name for file
+                $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                //Uploads Original Name
+                //$fileNameNew =$fileName;
+                $fileDestination = 'uploads/' . $fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestination);
+                echo "File Uploaded Successfully " . $fileNameNew;
+            } else {
                 echo "Your file size is TOO big ";
             }
-
-        }else{
+        } else {
             echo "There is an error in uploading your file!!!";
         }
-
-    }
-    else{
+    } else {
         echo "You can't upload the file of this type";
     }
 }

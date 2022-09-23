@@ -1,10 +1,10 @@
-HTML file - File Upload-1.html
+// HTML file - File Upload-1.html
 
 <html>
 <body>
 <form action="fileupload.php"method="post" enctype="multipart/form-data">
 Filename:
-<input type="file" name="file" id="file" />
+<input type="file" name="fileToUpload" id="file" />
 <br />
 <input type="submit" name="submit" value="Submit" />
 </form>
@@ -13,7 +13,7 @@ Filename:
 
 
 
-PHP file - File Upload-1.php
+// PHP file - File Upload-1.php
 
 
 <?php
